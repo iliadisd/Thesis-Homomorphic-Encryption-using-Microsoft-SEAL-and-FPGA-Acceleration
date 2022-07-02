@@ -9,5 +9,6 @@ magnitude when compared with the execution of the same scheme in a modern CPU, w
 terms of both performance and/or power efficiency. This can be considered as a significant step towards porting, and thus accelerating, the most computationally 
 intensive parts of the SEAL library to reconfigurable devices. In this Thesis, a small but rather costly part of the SEAL library is accelerated using the Alveo U200
 Data Accelerator Card. To specify which function/operation should be accelerated, Intel® VTune™ Profiler was used for the analysis of the CKKS example that Microsoft 
-SEAL provides. The entire library is run at the host (PC) side, except for the costly operation of division, which is executed at the source (accelerator) side. By doing 
-this, a X92.66 speedup was achieved, in regard with this costly operation. 
+SEAL provides. This methodlogy, determined the most costly function, which is divide_uint128_uint64_inplace_generic. The entire library is run at the host (PC) side, 
+except for the costly operation of division, which is executed at the source (accelerator) side. By doing this, a X92.66 speedup was achieved, in regard with this costly 
+operation. 
